@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script type='text/javascript' src='//pl23975835.highratecpm.com/dd/af/09/ddaf09a48d034f24d3a5baccda2d27ad.js'></script>
+  <title>CONGRATULATIONS, MAKAKAKUHA KA NG LIBRENG MOTOR</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body class="bggift bg-dark bg-gradient borderdotted">
+
+<div class="container mt-1 text-center">
+    <div class="card">
+        <div class="card-body">
+            <div id="openingSegment" class="bggift">
+              
+              <div class="animate__animated animate__bounceInDown">
+                <h1 class="text-success animate__animated animate__flash animate__infinite infinite animate__slower mt-3 mb-4 bg-danger">
+                    MASAYA
+                </h1>
+              </div>
+              <h2 class="animate__animated animate__shakeX animate__infinite infinite animate__slower text-danger border border-danger rounded-pill p-2"> Handa nang kunin ang iyong MOTOR GIFT!</h2>
+              
+                  <img src="https://i.ibb.co.com/Wtrr68Y/pngegg.png"
+                    class="img-fluid animate__animated animate__bounce animate__infinite infinite mt-5" />
+                <hr class="p-1" />
+                <h5 class="card-title">SAGUTIN ANG 3 TANONG NA ITO NG TAMA PARA SA ISANG CLAIM</h5>
+                <button id="startButton" class="btn btn-success btn-lg animate__animated animate__flash animate__slower animate__infinite infinite">Simulan ang Pagsagot</button>
+            </div>
+
+            <div id="question-container" class="d-none mt-5">
+                <h5 class="card-title" id="question-count"><span id="questionNumber">1</span>/<span
+                        id="totalQuestions"></span></h5>
+                <!-- Place where questions will be displayed -->
+            </div>
+
+            <div id="answer-container" class="d-none">
+                <h5 class="card-title">Your Answers:</h5>
+                <ul id="answer-list" class="list-group">
+                    <!-- List of answers will be displayed here -->
+                </ul>
+            </div>
+
+            <div id="closingSegment" class="d-none pb-5">
+                <h3 class="mt-5 h1 animate__animated animate__flash animate__infinite infinite animate__slower">
+                    Maraming salamat sa pag-sagot!
+                 </h3>
+                <b class="text-success">I-verify ang iyong sarili </b> , Pakibahagi ang iyong link sa Facebook at 10 sa iyong mga kaibigan/Whatsapp group
+                para patunayan na ikaw yun!
+                <p class="m-2">
+                    <input type="text" class="form-control" id="refLink" value="" />
+
+                    <div class="container">
+                      <a id="shareBtnFacebook" href="#" class="btn btn-primary btn-md animate__animated animate__heartBeat animate__infinite infinite">I-SHARE SA FACEBOOK</a>
+
+                        <a id="shareBtn" target="_blank" href="#" class="btn btn-success btn-md animate__animated animate__heartBeat animate__infinite infinite">SHARE SA WHATSAPP</a>
+
+                        <div class="progress-container mt-3">
+                            <div class="progress">
+                                <div id="progress" class="progress-bar bg-success" role="progressbar"
+                                    style="width: 0%; " aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+                            </div>
+                        </div>
+
+                        <div id="info" class="text-center mt-2 text-danger">Ibahagi Upang Simulan ang Pag-unlad</div>
+
+                        <div class="container mt-3">
+                            <div class="text-center">
+                                <h4 class="text-danger">Ang iyong Deadline</h4>
+                                <h1 id="countdown" class="display-2 mt-2 animate__animated animate__flash animate__infinite infinite animate__slower"></h1> Nananatili hanggang sa maubos ang oras
+                            </div>
+                        </div>
+
+                        <div class="mt-5">
+    <a href="https://www.highratecpm.com/rmmshyhki?key=1e998f0099f13cc5e31c02fb8d728c42" id="claimButton"
+       class="btn btn-block btn-primary mt-5 btn-lg"
+       onclick="alert('Mangyaring kumpletuhin ang Proseso sa Itaas upang itakda ang iPhone Shipping Address!')">
+       Kunin mo na ang motor na ito
+    </a>
+</div>
+
+
+                        <!-- Display the list of answers in the closing segment -->
+                        <ul id="answer-list-closing" class="list-group">
+                            <!-- List of answers will be displayed here -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+  const questionList = [
+    {
+        "question": "GUSTO MO NG SUZUKI O YAMAHA MOTORCYCLE?", //pertanyaan
+        "answerYes": "SUZUKI",  //jawaban kiri
+        "answerNo": "YAMAHA", //jawaban kanan
+        "text": "" //Teks optional dibawah jawaban, berupa catatan atau detail pertanyaan
+    },
+    {
+        "question": "BLACK O WHITE MOTORCYCLE?",
+        "answerYes": "BLACK",
+        "answerNo": "WHITE",
+        "text": ""
+    },
+    {
+        "question": "NA-FOLLOW MO BA AKO AT I-SHARE MO ANG POST KO?",
+        "answerYes": "YES",
+        "answerNo": "HINDI PA",
+        "text": ""
+    }
+];
+
+  let questionIndex = 0;
+  let answerList = [];
+
+  $(document).ready(function () {
+    $('#startButton').click(function () {
+      startAnswering();
+    });
+
+    $('#claimButton').click(function () {
+      alert('Mangyaring kumpletuhin ang Proseso sa Itaas upang itakda ang iPhone Shipping Address!');
+    });
+
+    $(document).on('click', '.answer-btn', function () {
+      const answer = $(this).text();
+      answerQuestion(answer);
+    });
+  });
+
+  function startAnswering() {
+    const openingSegment = $('#openingSegment');
+    const questionContainer = $('#question-container');
+
+    // Hide the opening segment
+    openingSegment.addClass('d-none');
+    
+    // Display the question segment
+    questionContainer.removeClass('d-none');
+    
+    // Display the first question
+    displayQuestion();
+
+    // Generate random ref code
+    generateRandomRef();
+}
+
+function generateRandomRef() {
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let result = '';
+    for (let i = 0; i < 6; i++) {
+        result += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+    $('#refLink').val(`https://cutt.ly/dezdwlaF`);
+}
+
+  function displayQuestion() {
+    const questionContainer = $('#question-container');
+    const questionNumber = questionIndex + 1;
+    const totalQuestions = questionList.length;
+
+    $('#questionNumber').text(questionNumber);
+    $('#totalQuestions').text(totalQuestions);
+
+    // Display the current question
+    questionContainer.html(`
+      <h3 id="question-${questionNumber}" class="question animate__animated animate__fadeIn text-danger">${questionList[questionIndex].question}</h3>
+      <div id="btnLists" class="m-1 mt-4 p-1">
+          <button class="btn btn-info answer-btn">${questionList[questionIndex].answerYes}</button>
+          <button class="btn btn-info answer-btn">${questionList[questionIndex].answerNo}</button>
+      </div>
+      <div class="mt-3">${questionList[questionIndex].text}</div>
+    `);
+  }
+
+  function answerQuestion(answer) {
+    console.log(`You answered: ${answer} - ${questionList[questionIndex].question}`);
+    answerList.push(`${answer} - ${questionList[questionIndex].question}`);
+
+    // Increase question index
+    questionIndex++;
+
+    // Check if there are still questions
+    if (questionIndex < questionList.length) {
+      displayQuestion();
+    } else {
+      console.log('You have answered all the questions.');
+      displayAnswers();
+    }
+  }
+
+  function displayAnswers() {
+    // Your implementation to display answers
+    $('#question-container').addClass('d-none');
+    $('#closingSegment').removeClass('d-none');
+  }
+</script>
+  <script>
+  $(document).ready(function () {
+    $('#shareBtn').click(function () {
+      updateProgress();
+    });
+
+    $('#shareBtnFacebook').click(function () {
+      const refLink = $('#refLink').val();
+      const facebookLink = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(refLink);
+      window.open(facebookLink, '_blank');
+      updateProgress();
+    });
+  });
+</script>
+
+    <script>
+        $(document).ready(function () {
+    $('#shareBtn').click(function () {
+        const refLink = $('#refLink').val();
+        const message = "Nakakuha ako ng libreng MOTOR mula sa Trusted GIVEAWAY na ito " + refLink;
+        const whatsappLink = "https://wa.me/?text=" + encodeURIComponent(message);
+        $(this).attr("href", whatsappLink);
+        updateProgress();
+    });
+});
+    </script>
+  <script>
+  let clickCount = 0;
+
+  $(document).ready(function () {
+    $('#shareBtn').click(function () {
+      updateProgress();
+    });
+  });
+
+function updateProgress() {
+    const info = $('#info');
+    if (Math.random() < 0.5 && clickCount != 0) {
+        // Ini adalah kata acak seolah pengguna belum share, jadi mesti diulang
+        info.html(ambilKalimatAcak('Mangyaring ibahagi sa iba't ibang mga contact#Naibahagi mo sa contact na ito#Ibahagi sa iba pang mga contact'));
+    }else{
+        clickCount++;
+        if (clickCount <= 10) {
+            const progress = $('#progress');
+            const percent = clickCount * 10;
+            progress.css('width', percent + '%').attr('aria-valuenow', percent).html(percent + '%');
+
+            const clicksLeft = 10 - clickCount;
+            info.html('Share ulit para makamit ' + clicksLeft + ' klik');
+        }
+      
+    }
+}
+
+function ambilKalimatAcak(stringInput) {
+  // Memisahkan kalimat-kalimat dari string
+  const kalimatArray = stringInput.split('#');
+
+  // Menghapus elemen array yang kosong (jika ada)
+  const kalimatArrayClean = kalimatArray.filter(kalimat => kalimat.trim() !== '');
+
+  // Memeriksa apakah ada kalimat yang tersedia
+  if (kalimatArrayClean.length === 0) {
+    return 'Walang magagamit na mga pangungusap.';
+  }
+
+  // Mengambil satu kalimat secara acak
+  const indexRandom = Math.floor(Math.random() * kalimatArrayClean.length);
+  return kalimatArrayClean[indexRandom];
+}
+
+
+
+
+// Batas waktu dalam detik
+let totalTime = 300;
+
+function updateCountdown() {
+  const remainingTime = totalTime--;
+
+  if (remainingTime >= 0) {
+    $('#countdown').text(remainingTime + " Pangalawa");
+  } else {
+    $('#countdown').text('Naubos na ang oras!');
+    clearInterval(interval);
+  }
+}
+
+// Update countdown setiap 1 detik
+const interval = setInterval(updateCountdown, 1000);
+updateCountdown(); // Panggil untuk memastikan countdown muncul saat halaman dimuat
+</script>
+</body>
+</html>
+<!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4815611,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4815611&101" alt="simple hit counter" border="0"></a></noscript>
+<title>PH</title>
+<!-- Histats.com  END  -->
